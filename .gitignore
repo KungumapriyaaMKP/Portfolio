@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local raw asset staging (already copied into public/, not served directly)
+/Achievements/
+/Leadership/
+/certificates/
+/images/
+/intro/
+/projects/

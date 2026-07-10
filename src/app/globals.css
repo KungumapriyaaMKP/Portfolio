@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05070d;
+  --surface: #10141d;
+  --foreground: #fdf6ee;
+  --muted: #9c968c;
+  --border: rgba(253, 246, 238, 0.12);
+  --accent: #f5954a;
+  --accent-light: #f7b578;
+  --accent-dark: #e07b10;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-display);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--accent);
+  color: #1a0800;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.marquee-vertical {
+  animation: marquee-vertical 42s linear infinite;
+}
+
+.marquee-vertical.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.marquee-vertical:hover {
+  animation-play-state: paused;
+}
+
+.marquee-horizontal {
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-horizontal.marquee-reverse {
+  animation-direction: reverse;
+}
+
+.marquee-horizontal:hover {
+  animation-play-state: paused;
+}
+
+@media (pointer: fine) {
+  html.custom-cursor-active,
+  html.custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+.cursor-frame {
+  transition: rotate 0.2s ease, scale 0.2s ease;
+}
+
+.cursor-frame.cursor-frame-active {
+  rotate: 45deg;
+  scale: 1.15;
+}
+
+.cursor-frame.cursor-frame-down {
+  scale: 0.8;
+}
+
+.cursor-dot {
+  transition: scale 0.2s ease;
+}
+
+.cursor-dot.cursor-dot-active {
+  scale: 2.5;
 }
