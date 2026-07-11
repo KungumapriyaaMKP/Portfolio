@@ -1,6 +1,5 @@
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
-import Tag from "@/components/Tag";
 import Watermark from "@/components/Watermark";
 import { techIcons, toolIcons } from "@/data/techIcons";
 import { skills } from "@/data/portfolio";
@@ -32,12 +31,17 @@ export default function Skills() {
 function SkillGroup({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="h-full border border-border bg-surface p-6 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10">
-      <h3 className="font-display text-base font-semibold text-foreground">
+      <h3 className="font-display text-lg font-semibold text-foreground">
         {title}
       </h3>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-3">
         {items.map((item) => (
-          <Tag key={item}>{item}</Tag>
+          <span
+            key={item}
+            className="border border-border bg-background/40 px-4 py-2.5 font-mono text-sm text-foreground"
+          >
+            {item}
+          </span>
         ))}
       </div>
     </div>
@@ -53,9 +57,9 @@ function Chip({
 }) {
   const Icon = meta?.icon;
   return (
-    <div className="flex shrink-0 items-center gap-2 border border-border bg-background/40 px-3 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-background/70">
-      {Icon && <Icon className="h-4 w-4 shrink-0" style={{ color: meta!.color }} />}
-      <span className="whitespace-nowrap text-xs text-muted">{item}</span>
+    <div className="flex shrink-0 items-center gap-2.5 border border-border bg-background/40 px-4 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-background/70">
+      {Icon && <Icon className="h-5 w-5 shrink-0" style={{ color: meta!.color }} />}
+      <span className="whitespace-nowrap text-sm text-foreground">{item}</span>
     </div>
   );
 }
@@ -76,7 +80,7 @@ function IconChipGroup({
 
   return (
     <div className="h-full border border-border bg-surface p-6 transition-all duration-300 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/10">
-      <h3 className="font-display text-base font-semibold text-foreground">
+      <h3 className="font-display text-lg font-semibold text-foreground">
         {title}
       </h3>
       <div className="mt-4 flex flex-col gap-2">

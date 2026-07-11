@@ -11,7 +11,6 @@ import Certifications from "@/components/Certifications";
 import Leadership from "@/components/Leadership";
 import Recognition from "@/components/Recognition";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
         <Recognition />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

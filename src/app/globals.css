@@ -108,7 +108,6 @@ body {
 }
 
 .cursor-frame.cursor-frame-active {
-  rotate: 45deg;
   scale: 1.15;
 }
 

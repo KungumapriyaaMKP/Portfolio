@@ -4,7 +4,17 @@ import { useEffect, useRef, type MouseEvent } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuBrainCircuit, LuCpu, LuDatabase } from "react-icons/lu";
-import { SiMongodb, SiPython, SiReact } from "react-icons/si";
+import {
+  SiMongodb,
+  SiPython,
+  SiReact,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiHuggingface,
+  SiOpencv,
+  SiNumpy,
+} from "react-icons/si";
 import Reveal from "@/components/Reveal";
 import TiltCard from "@/components/TiltCard";
 import { profile, stats } from "@/data/portfolio";
@@ -98,11 +108,15 @@ function StatRing({ value, max, delay }: { value: string; max: number; delay: nu
 }
 
 const asideIcons = [
-  { icon: SiReact, glyph: null },
-  { icon: null, glyph: "</>" },
-  { icon: SiPython, glyph: null },
   { icon: LuBrainCircuit, glyph: null },
-  { icon: null, glyph: "01" },
+  { icon: SiTensorflow, glyph: null },
+  { icon: SiPytorch, glyph: null },
+  { icon: SiScikitlearn, glyph: null },
+  { icon: SiHuggingface, glyph: null },
+  { icon: SiOpencv, glyph: null },
+  { icon: SiPython, glyph: null },
+  { icon: SiNumpy, glyph: null },
+  { icon: SiReact, glyph: null },
   { icon: SiMongodb, glyph: null },
   { icon: LuDatabase, glyph: null },
   { icon: LuCpu, glyph: null },
@@ -236,7 +250,7 @@ export default function Stats() {
             </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-3 lg:grid-cols-2">
+          <div className="grid grid-cols-4 gap-3 lg:grid-cols-3">
             {asideIcons.map((item, i) => {
               const Icon = item.icon;
               return (

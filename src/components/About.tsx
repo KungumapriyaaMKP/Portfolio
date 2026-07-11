@@ -17,11 +17,11 @@ export default function About() {
           title="A little about me"
           description={profile.bio}
         />
-
-        <Reveal className="mx-auto max-w-3xl">
-          <Marquee items={keywords} />
-        </Reveal>
       </div>
+
+      <Reveal className="relative mt-14 w-full">
+        <Marquee items={keywords} />
+      </Reveal>
     </section>
   );
 }

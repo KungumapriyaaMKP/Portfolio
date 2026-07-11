@@ -22,7 +22,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-6xl items-center justify-center px-6 py-4 lg:px-8">
         <ul className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
             <li key={item.href}>
@@ -63,12 +63,12 @@ export default function Navbar() {
         <a
           href={profile.resumeFile}
           download
-          className="border border-accent px-5 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-[#1a0800]"
+          className="bg-accent px-5 py-2 text-sm font-medium text-[#1a0800] transition-colors hover:bg-accent-light"
         >
           Resume
         </a>
         <a
-          href={`mailto:${profile.email}`}
+          href="#contact"
           className="bg-accent px-5 py-2 text-sm font-medium text-[#1a0800] transition-colors hover:bg-accent-light"
         >
           Let&apos;s talk
@@ -101,7 +101,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href={`mailto:${profile.email}`}
+                href="#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 block bg-accent px-5 py-3 text-center text-sm font-medium text-[#1a0800]"
               >

@@ -15,7 +15,7 @@ export const education = [
   {
     degree: "B.Tech, Artificial Intelligence & Data Science",
     school: "Sri Eshwar College of Engineering",
-    detail: "CGPA: 8.975 (upto 3rd sem)",
+    detail: "CGPA: 8.975 (upto 4th sem)",
     period: "2024 – 2028",
   },
   {
@@ -77,7 +77,7 @@ export const projects = [
     description:
       "Developed an edge AI framework leveraging Graph Neural Networks (GNNs) to detect and analyze fake news propagation across decentralized peer-to-peer networks. Optimized on-device inference using TensorFlow Lite and integrated real-time propagation modeling for low-latency misinformation detection.",
     tech: ["Graph Neural Networks", "TensorFlow Lite", "Edge AI", "BLE Mesh"],
-    image: undefined as string | undefined,
+    image: "/images/projects/ble-mesh-gnn.svg" as string | undefined,
     link: undefined as string | undefined,
   },
   {
@@ -114,7 +114,7 @@ export const projects = [
 
 export const stats = [
   { value: "10+", label: "Projects Built" },
-  { value: "12", label: "Awards & Recognitions" },
+  { value: "15+", label: "Awards & Recognitions" },
   { value: "18", label: "Certifications Earned" },
   { value: "8.975", label: "Current CGPA" },
 ];
@@ -209,10 +209,10 @@ export const certifications = [
   { name: "Introduction to OpenAI GPT Models", issuer: "Infosys SpringBoard", date: "Jun 2025", image: "/images/certificates/intro-openai-gpt-models.png" },
   { name: "Computer Vision 101", issuer: "Infosys SpringBoard", date: "Jun 2025", image: "/images/certificates/computer-vision-101.png" },
   { name: "Deep Learning for Developers", issuer: "Infosys SpringBoard", date: "Jun 2025", image: "/images/certificates/deep-learning-developers.png" },
-  { name: "Associate Certification in MQTT", issuer: "HiveMQ", date: "Nov 2024", image: undefined as string | undefined },
+  { name: "Associate Certification in MQTT", issuer: "HiveMQ", date: "Nov 2024", image: "/images/certificates/mqtt-hivemq.jpg" },
   { name: "GEN AI", issuer: "Guinness World Records (CoP)", date: "Sep 2024", image: "/images/certificates/gen-ai-guinness.jpg" },
-  { name: "Generative AI", issuer: "GUVI", date: "Mar 2024", image: undefined as string | undefined },
-  { name: "GEN AI (Learnathon)", issuer: "SAWIT AI", date: "Jan 2024", image: undefined as string | undefined },
+  { name: "Generative AI", issuer: "GUVI", date: "Mar 2024", image: "/images/certificates/generative-ai-guvi.jpg" },
+  { name: "GEN AI (Learnathon)", issuer: "SAWIT AI", date: "Jan 2024", image: "/images/certificates/gen-ai-learnathon.jpg" },
 ];
 
 export const achievements = [
@@ -225,7 +225,7 @@ export const achievements = [
   {
     title: "Caterpillar Tech Challenge 2026, Top 10 Finalist",
     date: "Jun 2026",
-    image: "/images/achievements/caterpillar-tech-challenge-2026.jpg",
+    image: "/images/achievements/caterpillar-tech-challenge-2026-swag.jpg",
   },
   {
     title: "2nd Runner Up, TN IMPACT '26",
