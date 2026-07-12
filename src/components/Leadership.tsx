@@ -29,6 +29,8 @@ function LeadershipImage({ image, alt }: { image: string; alt: string }) {
         src={image}
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className={`absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl ${
           loaded ? "opacity-40" : "opacity-0"
         }`}
@@ -37,6 +39,8 @@ function LeadershipImage({ image, alt }: { image: string; alt: string }) {
         ref={imgRef}
         src={image}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         onLoad={() => setLoaded(true)}
         className={`absolute inset-0 h-full w-full object-contain [image-rendering:high-quality] contrast-[1.08] saturate-[1.12] transition-transform duration-500 ease-out group-hover:scale-[1.04] ${
           loaded ? "opacity-100" : "opacity-0"

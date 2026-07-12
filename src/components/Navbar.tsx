@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
 import { nav, profile } from "@/data/portfolio";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -13,6 +15,17 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) return;
+    gsap.to(panel, {
+      height: open ? "auto" : 0,
+      opacity: open ? 1 : 0,
+      duration: 0.35,
+      ease: open ? "power3.out" : "power3.in",
+    });
+  }, [open]);
 
   return (
     <header
@@ -75,42 +88,45 @@ export default function Navbar() {
         </a>
       </div>
 
-      {open && (
-        <div className="border-t border-border bg-background md:hidden">
-          <ul className="flex flex-col px-6 py-4">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 text-base font-medium text-foreground"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li>
+      <div
+        ref={panelRef}
+        aria-hidden={!open}
+        className="overflow-hidden bg-background md:hidden"
+        style={{ height: 0, opacity: 0 }}
+      >
+        <ul className="flex flex-col border-t border-border px-6 py-4">
+          {nav.map((item) => (
+            <li key={item.href}>
               <a
-                href={profile.resumeFile}
-                download
+                href={item.href}
                 onClick={() => setOpen(false)}
-                className="mt-2 block border border-accent px-5 py-3 text-center text-sm font-medium text-accent"
+                className="block py-3 text-base font-medium text-foreground"
               >
-                Resume
+                {item.label}
               </a>
             </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="mt-2 block bg-accent px-5 py-3 text-center text-sm font-medium text-[#1a0800]"
-              >
-                Let&apos;s talk
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
+          ))}
+          <li>
+            <a
+              href={profile.resumeFile}
+              download
+              onClick={() => setOpen(false)}
+              className="mt-2 block border border-accent px-5 py-3 text-center text-sm font-medium text-accent"
+            >
+              Resume
+            </a>
+          </li>
+          <li>
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 block bg-accent px-5 py-3 text-center text-sm font-medium text-[#1a0800]"
+            >
+              Let&apos;s talk
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

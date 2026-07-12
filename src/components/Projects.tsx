@@ -52,11 +52,13 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={`${project.name} screenshot`}
+                      loading="lazy"
+                      decoding="async"
                       onError={() =>
                         setFailedImages((prev) => ({ ...prev, [project.name]: true }))
                       }
                       className="block h-auto w-full"
-                      style={{ animation: "kenburns 12s ease-in-out infinite alternate" }}
+                      style={{ animation: "kenburns 20s ease-out forwards" }}
                     />
                   </div>
                 </SlideReveal>

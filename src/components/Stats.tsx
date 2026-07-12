@@ -244,6 +244,8 @@ export default function Stats() {
                 <img
                   src="/images/pfp.jpg"
                   alt={profile.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-[260px] w-[220px] object-cover object-[50%_79%] sm:h-[280px] sm:w-[240px]"
                 />
               </TiltCard>
