@@ -93,6 +93,7 @@ export default function VideoIntro() {
     if (!video) return;
 
     const onSiteStart = () => {
+      video.currentTime = 0;
       video.muted = false;
       video
         .play()
