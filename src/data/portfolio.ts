@@ -286,11 +286,11 @@ export const achievements = [
 
 export const leadership = [
   {
-    role: "GDG Co-Lead",
+    role: "GDG Photography Co-Lead",
     image: "/images/leadership/gdg-co-lead.jpg",
   },
   {
-    role: "PALS Student Lead",
+    role: "IIT PALS Student Lead",
     image: "/images/leadership/pals-student-lead.jpg",
   },
   {

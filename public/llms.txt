@@ -1,0 +1,45 @@
+# Kungumapriyaa M
+
+> AI/ML Engineer and Full-Stack Developer based in Coimbatore, Tamil Nadu, India. B.Tech Artificial Intelligence & Data Science student at Sri Eshwar College of Engineering (2024–2028, CGPA 8.975). Builds intelligent systems spanning graph neural networks, computer vision, and full-stack web platforms.
+
+Portfolio: https://kungumapriyaa.netlify.app
+Resume (PDF): https://kungumapriyaa.netlify.app/KUNGUMAPRIYAA%20M_24AD107.pdf
+GitHub: https://github.com/KungumapriyaaMKP
+LinkedIn: https://www.linkedin.com/in/kungumapriyaa-m-197027328/
+Email: kungumapriyaamkp5@gmail.com
+
+## Experience
+
+- Agentic AI Intern, Hem (May 2026) — designed autonomous LLM-driven agents for planning, tool use, and multi-step task execution; prompt orchestration and agent memory.
+- MERN Stack Intern, Hem (Dec 2025) — built full-stack web applications with REST APIs (Express, Node.js), MongoDB data modeling, and React.js interfaces.
+- AI Intern, Infosys SpringBoard (Aug 2025) — applied AI/ML to knowledge representation and mapping interconnected concepts across domains.
+
+## Featured Projects
+
+- LeakSense — AI digital twin for diesel engine air leak detection and isolation, using sensor analytics and NVIDIA Omniverse for real-time visualization and fault localization.
+- BLE Mesh + GNN Fake News Propagation — Edge AI framework using Graph Neural Networks to detect and analyze fake news propagation across decentralized peer-to-peer networks; on-device inference via TensorFlow Lite.
+- EduVerse — Full-stack academy platform built with React.js, Node.js, Express.js and MongoDB.
+- Park Ease — AI-based real-time parking detection system using OpenCV and computer vision.
+- Sri Kungumayi Traders — Business website for an industrial and textile trading company, with product catalog and WhatsApp-integrated inquiries.
+
+## Skills
+
+Languages & Core: C, C++, Python, Java, JavaScript, HTML, CSS, Data Structures, OOPS, DBMS
+Web/Full-Stack: React.js, Node.js, Express.js, MongoDB, MySQL
+AI/ML: Machine Learning, Graph Neural Networks, Computer Vision, DeepFace
+Tools: Git, GitHub, VS Code, Jupyter Notebook, Blender, NVIDIA Omniverse, n8n
+
+## Recognition
+
+15+ hackathon and competition awards, including Top 10 Finalist at Caterpillar Tech Challenge 2026, 2nd Runner-Up at TN-IMPACT 2026, 1st Place at CODETHON '26, and Winner of Prompt Battle. 18 professional certifications across AI/ML, cloud, and software engineering (Udemy, IBM SkillsBuild, Infosys SpringBoard, Coursera, HiveMQ, GUVI).
+
+## Leadership
+
+GDG Co-Lead, PALS Student Lead, GSSoC SCP Contributor.
+
+## Competitive Programming
+
+LeetCode: 502 problems solved (top 20%, contest rating 1649) — https://leetcode.com/u/KungumapriyaaMKP/
+SkillRack: 1,831 programs solved, rank #4,633
+GeeksforGeeks: score 649, institute rank #20 — https://www.geeksforgeeks.org/user/kungumaprhukh/
+HackerRank: badges in C++, Python, SQL — https://www.hackerrank.com/profile/kungumapriyaamk1

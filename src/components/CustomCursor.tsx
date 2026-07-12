@@ -22,6 +22,8 @@ export default function CustomCursor() {
 
     document.documentElement.classList.add("custom-cursor-active");
 
+    gsap.set([frame, dot], { x: window.innerWidth / 2, y: window.innerHeight / 2 });
+
     const quickFrameX = gsap.quickTo(frame, "x", { duration: 0.12, ease: "power2.out" });
     const quickFrameY = gsap.quickTo(frame, "y", { duration: 0.12, ease: "power2.out" });
     const quickDotX = gsap.quickTo(dot, "x", { duration: 0.04, ease: "power2.out" });
